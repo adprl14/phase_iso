@@ -76,7 +76,7 @@ and
 
 $$
 \mu_{ij} =
-\operatorname{atan2}
+\mathrm{atan2}
 \left(
 \theta_{s,ij},
 \theta_{c,ij}
@@ -105,10 +105,10 @@ The regularized objective has the form
 
 $$
 \widehat{\theta}_u =
-\operatorname*{arg,min}*{\theta_u}
+\underset{\theta_u}{\mathrm{arg\,min}}
 \left[
 \frac{1}{n}
-\sum*{k=1}^{n}
+\sum_{k=1}^{n}
 \exp\left(-z_{k,u}^{\mathsf{T}}\theta_u\right)
 +
 \lambda
@@ -354,9 +354,9 @@ For each edge, the estimated magnitude is
 $$
 \widehat{\kappa}_{ij} =
 \sqrt{
-\widehat{\theta}*{c,ij}^2
+\widehat{\theta}_{c,ij}^2
 +
-\widehat{\theta}*{s,ij}^2
+\widehat{\theta}_{s,ij}^2
 }.
 $$
 
@@ -462,10 +462,10 @@ The regularized JAX estimator uses proximal-gradient optimization.
 For an edge group $v_j$, the group-lasso proximal update is
 
 $$
-\operatorname{prox}_{\eta\lambda}(v_j) =
+\mathrm{prox}_{\eta\lambda}(v_j) =
 \left(
 1-
-\frac{\eta\lambda}{\lVert v_j\rVert_2}
+\frac{\eta\lambda}{\|v_j\|_2}
 \right)_+
 v_j,
 $$
@@ -692,5 +692,3 @@ The current Python files focus primarily on the interaction-screening estimator.
 ## License
 
 Add the desired open-source license in `LICENSE` before distributing the repository.
-
-
