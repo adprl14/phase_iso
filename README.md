@@ -31,9 +31,7 @@ be a vector of phases, where each $Y_i$ is represented in radians.
 The pairwise circular graphical model has density
 
 $$
-p(y)
-====
-
+p(y) =
 \frac{1}{Z(\theta)}
 \exp\left[
 \sum_{(i,j)\in E}
@@ -52,27 +50,21 @@ where:
 The implementation uses the natural parameters
 
 $$
-\theta_{c,ij}
-=============
-
+\theta_{c,ij} =
 \kappa_{ij}\cos(\mu_{ij})
 $$
 
 and
 
 $$
-\theta_{s,ij}
-=============
-
+\theta_{s,ij} =
 \kappa_{ij}\sin(\mu_{ij}).
 $$
 
 The coupling magnitude and preferred phase difference can be recovered using
 
 $$
-\kappa_{ij}
-===========
-
+\kappa_{ij} =
 \sqrt{
 \theta_{c,ij}^2
 +
@@ -83,9 +75,7 @@ $$
 and
 
 $$
-\mu_{ij}
-========
-
+\mu_{ij} =
 \operatorname{atan2}
 \left(
 \theta_{s,ij},
@@ -138,9 +128,7 @@ The penalty is a group-lasso penalty. The cosine and sine coefficients associate
 The default regularization strength is
 
 $$
-\lambda
-=======
-
+\lambda =
 4
 \sqrt{
 \frac{
@@ -366,9 +354,7 @@ The optional `alpha` argument applies a hard threshold after the regularized fit
 For each edge, the estimated magnitude is
 
 $$
-\widehat{\kappa}_{ij}
-=====================
-
+\widehat{\kappa}_{ij} =
 \sqrt{
 \widehat{\theta}*{c,ij}^2
 +
@@ -478,9 +464,7 @@ The regularized JAX estimator uses proximal-gradient optimization.
 For an edge group $v_j$, the group-lasso proximal update is
 
 $$
-\operatorname{prox}_{\eta\lambda}(v_j)
-======================================
-
+\operatorname{prox}_{\eta\lambda}(v_j) =
 \left(
 1-
 \frac{\eta\lambda}{\lVert v_j\rVert_2}
