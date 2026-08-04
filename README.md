@@ -1,5 +1,3 @@
-# phase_iso
-
 # Graphical Models for Multivariate Phase Relationships
 
 Python implementations of the interaction-screening method introduced in:
