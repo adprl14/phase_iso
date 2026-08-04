@@ -104,9 +104,7 @@ For each node $u$, the interaction-screening estimator minimizes a nodewise obje
 The regularized objective has the form
 
 $$
-\widehat{\theta}_u
-==================
-
+\widehat{\theta}_u =
 \operatorname*{arg,min}*{\theta_u}
 \left[
 \frac{1}{n}
